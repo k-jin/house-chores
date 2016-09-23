@@ -1,4 +1,4 @@
-import http.client, urllib.parse, datetime
+import httplib, urllib, datetime
 week = datetime.date.today().isocalendar()[1]&8
 housemates = [
 	{"name" : "Mikell", "id" : "13941004"},
@@ -28,9 +28,9 @@ data = {
     ]
 }
 
-encoded_data = urllib.parse.urlencode(data)
+encoded_data = urllib.urlencode(data)
 
-conn = http.client.HTTPSConnection("api.groupme.com")
+conn = httplib.HTTPSConnection("api.groupme.com")
 conn.request("POST", "/v3/bots/post", encoded_data)
 
 response = conn.getresponse()
