@@ -12,7 +12,7 @@ housemates = [
 ]
 morning_msg = "@" + housemates[week]["name"] + " take out the trash please :D"
 bring_it_home = "@" + housemates[week]["name"] + " bring 'er home"
-if datetime.datetime.today().weekday() == 2:
+if datetime.datetime.today().weekday() == 1:
 	msg = morning_msg
 else: 
 	msg = bring_it_home
