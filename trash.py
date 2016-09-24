@@ -1,5 +1,5 @@
 import httplib, urllib, datetime
-week = datetime.date.today().isocalendar()[1]&8
+week = datetime.date.today().isocalendar()[1]%8
 housemates = [
 	{"name" : "Mikell", "id" : "13941004"},
 	{"name" : "Cooper", "id" : "13850584"},
