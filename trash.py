@@ -11,11 +11,12 @@ housemates = [
 	{"name" : "Allan", 	"id" : "12021585"}
 ]
 morning_msg = "@" + housemates[week]["name"] + " take out the trash please :D"
-bring_it_home = "@" + housemates[week]["name"] + " bring 'er home"
+bring_it_home = "@" + housemates[week+4]["name"] + " bring me home (the trash cans. home. pls)"
 if datetime.datetime.today().weekday() == 1:
 	msg = morning_msg
 else: 
 	msg = bring_it_home
+        week += 4
 data = {
 	"bot_id" : "1d089fba642aa0577c588837f5",
 	"text": msg,
